@@ -11,7 +11,7 @@ const Employ = () => {
   const id = location.pathname.split("/")[3];
   
   const fetchEmp = async () => {
-    const res = await axios.get(`https://react-crud-v3am.onrender.com/api/user/emp/${id}`);
+    const res = await axios.get(`https://sistema-pos.onrender.com/api/user/emp/${id}`);
     setValue(res.data);
   };
 
@@ -24,7 +24,7 @@ const Employ = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://react-crud-v3am.onrender.com/api/user/emp/${id}`, value);
+      await axios.put(`https://sistema-pos.onrender.com/api/user/emp/${id}`, value);
       navigate("/user/dashboard");
     } catch (error) {
       setError(error.message);
